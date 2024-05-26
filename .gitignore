@@ -1,0 +1,76 @@
+# Виртуальные окружения
+venv/
+ENV/
+env/
+.venv/
+bin/
+lib/
+include/
+
+# Конфигурационные файлы для IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Кэшируемые файлы
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Логи и временные файлы
+*.log
+*.tmp
+*.bak
+*.swp
+
+# Файлы базы данных SQLite
+*.sqlite3
+
+# Файлы окружения
+.env
+.env.*
+
+# Файлы и директории созданные тестовыми фреймворками
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+.testrepository/
+
+# Скомпилированные файлы
+*.so
+*.dylib
+*.dll
+
+# Сборочные каталоги
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Сервисные файлы операционной системы
+.DS_Store
+Thumbs.db
+
+# Docker
+docker-compose.override.yml
+
+# Файлы пакетов и зависимостей
+Pipfile
+Pipfile.lock
+poetry.lock
+
+# Миграции базы данных (если используется Flask-Migrate)
+migrations/
+
+# Дампы базы данных PostgreSQL
+*.sql
+*.dump
