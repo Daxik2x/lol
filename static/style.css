@@ -1,3 +1,5 @@
+
+/*
 body {
     font-family: Arial, sans-serif;
     text-align: center;
@@ -22,4 +24,52 @@ h1 {
     left:50%;
     
     transform: translateX(-50%);
+}
+*/
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: white;
+    text-align: center;
+    background-color: #000;
+    background-image: url('/static/star_background.png');
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+h1, h2 {
+    color: #FFD700;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 5px 0;
+    font-size: 18px;
 }

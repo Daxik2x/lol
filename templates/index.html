@@ -1,15 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-        <meta http-equiv="X-UA-Compatible" content="ie=edge"> <title>World</title>
-        <link rel="stylesheet" href=" /static/style.css">
-    </head>
-    <body>
-        <main>
-            <h1>Добро пожаловать в Мир</h1>
-            <p>Use the URL format /&lt;country_code&gt; to get information about a specific country.</p>
-        </main>
-    </body>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поиск информации по странам</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: rgb(255, 255, 255);
+            background-image: url('/static/star_background.png');
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            background-color: #1e1e1e;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            width: 80%;
+            margin-bottom: 20px;
+            border: 1px solid #1f1f1f;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Добро пожаловать</h1>
+        <p>Введите код страны для получения информации:</p>
+        <form method="POST">
+            <input type="text" name="country_code" placeholder="напр. USA, RUS, BRA, UKR...">
+            <button type="submit">Искать</button>
+        </form>
+    </div>
+    <img src="/static/globe_small.png" alt="Small Earth Globe">
+</body>
 </html>
