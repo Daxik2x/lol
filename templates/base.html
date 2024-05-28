@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <style>{% block style %}{% endblock %}</style> 
+</head>
+<body>
+    <header>
+        <h1>{% block header %}{% endblock %}</h1>
+        <form method="POST" action="/">
+            <input type="text" name="country_code" placeholder="напр. USA, RUS, BRA, UKR..." required autofocus>
+            <button type="submit">Искать</button>
+        </form>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>

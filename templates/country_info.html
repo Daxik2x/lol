@@ -1,34 +1,12 @@
-<!-- <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href=" /static/style.css">
-    <title>Country Info</title>
-</head>
-<body>
-    <h1>{{ country_name }}</h1>
-    <p>Country: {{ country_name }}</p>
-    <p>Number of Cities: {{ city_count }}</p>
-    <h2>Top 10 Largest Cities</h2>
-    <ul>
-        {% for city, population in cities %}
-            <li>{{ city }} - {{ population }}</li>
-        {% endfor %}
-    </ul>
-</body>
-</html>
 
--->
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Информация о стране</title>
-    <link rel="stylesheet" href="/static/style.css">
-</head>
-<body>
-    <h1>Информация о стране {{ country_name }}</h1>
+
+{% extends "base.html" %}
+
+{% block title %}Информация о стране{% endblock %}
+
+{% block header %}Информация о стране {{ country_name }}{% endblock %}
+
+{% block content %}
     <p>Всего городов: {{ city_count }}</p>
     <img src="/static/globe_large.png" alt="Large Earth Globe" style="width: 150px; height: auto;">
     <h2>Топ 10 самых больших городов страны:</h2>
@@ -37,5 +15,12 @@
             <li>{{ city }} ~ {{ population }} человек</li>
         {% endfor %}
     </ul>
-</body>
-</html>
+
+    {% if random_phrase %}
+    <footer>
+        <p>{{ random_phrase }}</p>
+    </footer>
+    {% endif %}
+{% endblock %}
+
+
